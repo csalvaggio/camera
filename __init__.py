@@ -1,1 +1,1 @@
-import camera.gphoto2
+from .Camera import Camera

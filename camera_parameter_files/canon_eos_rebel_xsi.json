@@ -1,0 +1,18 @@
+{
+   "capturetarget": "Memory card",
+   "imageformat": "RAW",
+   "iso": "Auto",
+   "whitebalance": "Auto",
+   "colorspace": "AdobeRGB",
+   "exposurecompensation": "0",
+   "focusmode": "Manual",
+   "continuousaf": "Off",
+   "aspectratio": "3:2",
+   "autoexposuremode": "TV",
+   "drivemode": "Single",
+   "picturestyle": "Neutral",
+   "aperture": "implicit auto",
+   "shutterspeed": "1/125",
+   "meteringmode": "Center-weighted average",
+   "configurable": "true"
+}
