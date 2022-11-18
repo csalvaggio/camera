@@ -11,14 +11,12 @@ This is setup to be a Python module.  Clone this repository in your PYTHONPATH d
 * time
 
 Non-Standard Modules
-
 * gphoto2
 
-      * Make sure the gphoto2 command-line program and library are installed on your machine.
+   * Make sure the gphoto2 command-line program and library are installed on your machine.
+   * Install the Python photo2 binding ...
 
-      * Install the Python photo2 binding ...
-
-            pip3 install gphoto2
+      pip3 install gphoto2
 
 # TESTING #
 Each file contains a test harness.  Testing may be done by typing "python <file>.py".  On some machine, these routines may need to be execute with root privileges.
