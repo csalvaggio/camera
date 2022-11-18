@@ -14,7 +14,7 @@ Non-Standard Modules
 * gphoto2
 
    * Make sure the gphoto2 command-line program and library are installed on your machine.
-   * Install the Python photo2 binding ...
+   * Install the Python gphoto2 binding ...
 
          pip3 install gphoto2
 
