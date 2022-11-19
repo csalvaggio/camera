@@ -1,3 +1,4 @@
+import datetime
 import json
 import os.path
 import sys
@@ -11,7 +12,7 @@ class Camera(object):
       self._connection = None
       self._settings = None
 
-      self.connect_and_initialize(verbose=verbose)
+      self._connect_and_initialize(verbose=verbose)
 
       if filename:
          self.ingest_parameters(filename, verbose=verbose)
@@ -19,7 +20,7 @@ class Camera(object):
       if self._settings:
          self.set_parameters(verbose=verbose)
 
-   def connect_and_initialize(self, verbose=False):
+   def _connect_and_initialize(self, verbose=False):
       if self._connection:
          return
       else:
@@ -147,8 +148,15 @@ class Camera(object):
          sys.stdout.flush()
          sys.exit()
 
-   def capture():
-      pass
+   def capture(self):
+      iso8601_time_string = \
+         datetime.datetime.utcnow().isoformat(timespec='milliseconds') + 'Z'
+      iso8601_time_string = iso8601_time_string.replace(":", "-" )
+      iso8601_time_string = iso8601_time_string.replace(".", "-" )
+
+
+
+
 
 
 

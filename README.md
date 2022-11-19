@@ -5,6 +5,7 @@ This repository defines a class that attempts to abstract the GPhoto2 camera mod
 This is setup to be a Python module.  Clone this repository in your PYTHONPATH directory.  The module may be imported with "import camera" in any of your Python codes.
 
 # DEPENDENCIES #
+* datetime
 * json
 * os.path
 * sys
