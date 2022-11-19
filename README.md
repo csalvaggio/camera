@@ -23,6 +23,6 @@ Non-Standard Modules
 Each file contains a test harness.  Testing may be done by typing "python <file>.py".  On some machine, these routines may need to be execute with root privileges.
 
 # NOTES #
-To list camera parameter field names, issue the command ...
+To list camera parameter field names, issue the command (you may need to use sudo) ...
 
-   gphoto2 --list-config
+      gphoto2 --list-config
