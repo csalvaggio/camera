@@ -258,8 +258,11 @@ class Camera(object):
 
 
 if __name__ == '__main__':
+   import camera
+
    camera_parameter_filename = \
       'camera_parameter_files/canon_eos_rebel_xsi.json'
+
    verbose = True
-   c = Camera(camera_parameter_filename, verbose=verbose)
+   c = camera.Camera(camera_parameter_filename, verbose=verbose)
    filepath = c.capture(verbose=verbose)
