@@ -30,7 +30,7 @@ class Camera(object):
             sys.stdout.flush()
          self._connection = gp.Camera()
 
-        # Initialize the gphoto2 camera
+      # Initialize the gphoto2 camera
       if verbose:
          msg = 'initialize: '
          msg += 'Initializing the gphoto2 camera ...'
@@ -82,14 +82,14 @@ class Camera(object):
          sys.stdout.flush()
          sys.exit()
 
-   def _set_config(config, parameter, field_name, error_message):
+   def _set_config(self, config, field, value, error_message):
       try:
          node = \
-            gp.check_result(gp.gp_widget_get_child_by_name(config, parameter))
+            gp.check_result(gp.gp_widget_get_child_by_name(config, field))
       except:
          msg = 'set_config: '
-         msg += 'Specified parameter not found in camera: '
-         msg += '{0}'.format(parameter)
+         msg += 'Specified field name not found in camera: '
+         msg += '{0}'.format(field)
          msg += '\n'
          sys.stdout.write(msg)
          sys.stdout.flush()
@@ -100,14 +100,14 @@ class Camera(object):
          choice = gp.check_result(gp.gp_widget_get_choice(node, idx))
          choices.append(choice)
 
-      if self._settings[field_name] in choices:
+      if value in choices:
          try:
-            node.set_value(self._settings[field_name])
-            self._settings['connection'].set_config(config)
+            node.set_value(value)
+            self._connection.set_config(config)
          except:
             msg = 'set_config: '
             msg = 'Problem occurred when setting camera configuration: '
-            msg += '{0}'.format(parameter)
+            msg += '{0}'.format(field)
             msg += '\n'
             sys.stdout.write(msg)
             sys.stdout.flush()
@@ -120,19 +120,23 @@ class Camera(object):
    def set_parameters(self, verbose=False):
       if self._connection:
          config = self._connection.get_config()
-         for label in self._settings:
-            value = self._settings[label]
+         fields_to_ignore = ['configurable']
+         for field in self._settings:
+            if field in fields_to_ignore:
+               continue
+            value = self._settings[field]
             if verbose:
                msg = 'set_parameters: '
-               msg += 'Setting "{0}" '.format(label)
+               msg += 'Setting "{0}" '.format(field)
                msg += 'to "{0}"'.format(value)
                msg += '\n'
                sys.stdout.write(msg)
                sys.stdout.flush()
             error_message = 'set_parameters: '
-            error_message += '{0} '.format(label)
-            error_message += 'is not a valid parameter label for this camera'
-            _set_config(config, value, label, error_message)
+            error_message += '{0} '.format(field)
+            error_message += 'is not a valid parameter field for this camera'
+            error_message += '\n'
+            self._set_config(config, field, value, error_message)
       else:
          msg = 'set_parameters: '
          msg += 'gphoto2 camera object not defined'
@@ -147,5 +151,5 @@ class Camera(object):
 
 
 if __name__ == '__main__':
-   filename = 'settings/canon_eos_rebel_xsi.json'
+   filename = 'camera_parameter_files/canon_eos_rebel_xsi.json'
    c = Camera(filename, verbose=True)

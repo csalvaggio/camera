@@ -6,6 +6,8 @@
    "colorspace": "AdobeRGB",
    "exposurecompensation": "0",
    "focusmode": "Manual",
+   "continuousaf": "Off",
+   "aspectratio": "3:2",
    "autoexposuremode": "TV",
    "drivemode": "Single",
    "picturestyle": "Neutral",
