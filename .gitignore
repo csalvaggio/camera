@@ -1,2 +1,6 @@
+*.swp
+*.jpg
+*.cr2
+*.cr3
 *.pyc
 __pycache__

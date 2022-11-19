@@ -13,6 +13,5 @@
    "picturestyle": "Neutral",
    "aperture": "implicit auto",
    "shutterspeed": "1/125",
-   "meteringmode": "Center-weighted average",
-   "configurable": "true"
+   "meteringmode": "Center-weighted average"
 }
