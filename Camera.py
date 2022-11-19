@@ -15,6 +15,8 @@ class Camera(object):
 
       if filename:
          self.ingest_parameters(filename, verbose=verbose)
+
+      if self._settings:
          self.set_parameters(verbose=verbose)
 
    def connect_and_initialize(self, verbose=False):
