@@ -14,7 +14,7 @@ This is setup to be a Python module.  Clone this repository in your PYTHONPATH d
 Non-Standard Modules
 * gphoto2
 
-   * Make sure the gphoto2 command-line program and library are installed on your machine.
+   * Make sure the gphoto2 command-line program and library are installed on your machine
    * Install the Python gphoto2 binding ...
 
          pip3 install gphoto2
