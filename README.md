@@ -26,7 +26,11 @@ To list the camera's parameter field names, issue the following instruction on t
 
       gphoto2 --list-config
 
-(you may need to use sudo on the above command on some machines).
+To list all the possible values that each parameter may take on, issue the following instruction on the command line ...
+
+      gphoto2 --list-all-config
+
+(you may need to use sudo on the above commands on some machines).
 
 # USAGE #
 The *Camera* class may be imported as
