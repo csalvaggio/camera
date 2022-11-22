@@ -21,16 +21,9 @@ Non-Standard Modules
 # TESTING #
 Each file contains a test harness.  Testing may be done by typing "python3 \<file\>.py".  On some machine, these routines may need to be execute with root privileges (sudo).
 
-# NOTES #
-To list the camera's parameter field names, issue the following instruction on the command line ...
+If you are running the test harness in the class definition file (or your own code), and your platform requires you to run this code with root privileges (sudo), you may need to specify the PYTHONPATH where this module is installed when running the program, *e.g.*
 
-      gphoto2 --list-config
-
-To list all the possible values that each parameter may take on, issue the following instruction on the command line ...
-
-      gphoto2 --list-all-config
-
-(you may need to use sudo on the above commands on some machines).
+    sudo PYTHONPATH=\<path where module is installed\> python3 Camera.py
 
 # USAGE #
 The *Camera* class may be imported as
@@ -112,3 +105,14 @@ where *delete* is a boolean that indicates whether the file should be deleted fr
     verbose=True|False
 
 where *verbose* is a boolean that indicates whether the member function should be "chatty" during it's operation (useful during debugging).
+
+# NOTES #
+To list the camera's parameter field names, issue the following instruction on the command line ...
+
+      gphoto2 --list-config
+
+To list all the possible values that each parameter may take on, issue the following instruction on the command line ...
+
+      gphoto2 --list-all-config
+
+(you may need to use sudo on the above commands on some machines).

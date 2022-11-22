@@ -269,7 +269,8 @@ if __name__ == '__main__':
    import datetime
 
    camera_parameter_filename = \
-      'camera_parameter_files/canon_eos_rebel_xsi.json'
+      'camera_parameter_files/nikon_dsc_d3500.json'
+#      'camera_parameter_files/canon_eos_rebel_xsi.json'
 
    verbose = True
    delete_from_sd_card = True

@@ -2,5 +2,6 @@
 *.jpg
 *.cr2
 *.cr3
+*.nef
 *.pyc
 __pycache__
