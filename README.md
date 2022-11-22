@@ -23,7 +23,7 @@ Each file contains a test harness.  Testing may be done by typing "python3 \<fil
 
 If you are running the test harness in the class definition file (or your own code), and your platform requires you to run this code with root privileges (sudo), you may need to specify the PYTHONPATH where this module is installed when running the program, *e.g.*
 
-    sudo PYTHONPATH=\<path where module is installed\> python3 Camera.py
+    sudo PYTHONPATH=<path where module is installed> python3 Camera.py
 
 # USAGE #
 The *Camera* class may be imported as
